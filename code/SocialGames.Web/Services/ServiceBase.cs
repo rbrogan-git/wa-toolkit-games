@@ -62,7 +62,8 @@
                 {
                     tempResponse.Content.Headers.ContentType = new MediaTypeHeaderValue(contentType);
                 }
-
+                
+                tempResponse.Headers.Add("Access-Control-Allow-Origin", "*");// Fix for ie10 on Windows 8 Release Preview
                 response = tempResponse;
                 tempResponse = null;
             }
